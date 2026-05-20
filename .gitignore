@@ -1,0 +1,42 @@
+# dependencias
+node_modules/
+
+# build
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# .net
+**/bin/
+**/obj/
+
+# cache
+.vite/
+.eslintcache
+
+# env
+.env
+.env.local
+.env.*.local
+
+# segredos locais (chaves de api, etc)
+appsettings.local.json
+
+# logs
+*.log
+npm-debug.log*
+
+# editor
+.vscode/
+.idea/
+*.suo
+*.sw?
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# temp
+*.tmp
+*.bak
