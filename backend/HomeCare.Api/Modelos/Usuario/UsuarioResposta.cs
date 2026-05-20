@@ -1,0 +1,10 @@
+namespace HomeCare.Api.Modelos.Usuario;
+
+public class UsuarioResposta
+{
+    public int Id { get; set; }
+    public string Nome { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string TipoUsuario { get; set; } = string.Empty;
+    public bool Ativo { get; set; }
+}
