@@ -1,0 +1,93 @@
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--roxo-escuro) 0%, var(--roxo) 100%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform .25s ease;
+  box-shadow: 4px 0 24px rgba(0,0,0,.18);
+}
+.aberta { transform: translateX(0) }
+
+@media (min-width: 769px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    transform: translateX(0);
+    flex-shrink: 0;
+  }
+  .overlay { display: none !important }
+  .closeBtn { display: none }
+}
+
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 199;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 16px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  position: relative;
+}
+.logoSvg { width: 44px; height: 44px; flex-shrink: 0 }
+.logoImg {
+  height: 54px; width: auto;
+  background: #fff; border-radius: 10px;
+  padding: 4px 8px;
+  object-fit: contain; flex-shrink: 0;
+}
+.nomeCursivo { font-family: 'Dancing Script', cursive; font-size: 16px; color: #fff; line-height: 1.2 }
+.petSitter { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,.75) }
+
+.closeBtn {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: rgba(255,255,255,.7);
+  cursor: pointer; display: flex; align-items: center;
+}
+.closeBtn:hover { color: #fff }
+
+.usuarioBox {
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.avatarCircle {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--rosa); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 16px; flex-shrink: 0;
+}
+.usuarioNome { color: #fff; font-size: 13px; font-weight: 500; line-height: 1.2 }
+.usuarioRole { color: rgba(255,255,255,.6); font-size: 11px }
+
+.nav { flex: 1; padding: 12px 10px; display: flex; flex-direction: column; gap: 4px }
+
+.navLink {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 8px;
+  color: rgba(255,255,255,.8); text-decoration: none;
+  font-size: 14px; font-weight: 400;
+  transition: background .18s, color .18s;
+}
+.navLink:hover { background: rgba(255,255,255,.12); color: #fff }
+.navLinkAtivo { background: rgba(255,255,255,.2); color: #fff; font-weight: 600 }
+
+.sairBtn {
+  display: flex; align-items: center; gap: 10px;
+  margin: 0 10px 18px; padding: 10px 14px;
+  border-radius: 8px; border: 1px solid rgba(255,255,255,.2);
+  background: none; color: rgba(255,255,255,.75); cursor: pointer;
+  font-size: 14px; font-family: 'Poppins', sans-serif;
+  transition: background .18s;
+}
+.sairBtn:hover { background: rgba(255,255,255,.1); color: #fff }

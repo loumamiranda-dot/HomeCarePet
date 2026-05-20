@@ -1,0 +1,296 @@
+/* navbar fixa no topo */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 68px; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px;
+  background: #fff;
+  border-bottom: 2px solid #F3E8FF;
+  box-shadow: 0 2px 12px rgba(123,45,139,.07);
+}
+.navBrand { display: flex; align-items: center; gap: 12px; text-decoration: none }
+.navLogo { height: 44px; width: auto }
+.navBrandNome {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px; color: var(--roxo); line-height: 1;
+}
+.navBrandSub {
+  font-size: 10px; font-weight: 800; letter-spacing: 3px;
+  color: var(--rosa); text-transform: uppercase;
+}
+.navBrandFallback { display: flex; align-items: center; gap: 12px }
+.navLogoFallback { width: 44px; height: 44px }
+.navAcoes { display: flex; align-items: center; gap: 12px }
+.btnOutline {
+  padding: 9px 22px; border-radius: var(--radius);
+  border: 2px solid var(--roxo); color: var(--roxo);
+  background: none; font-size: 14px; font-weight: 600;
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: all .18s;
+}
+.btnOutline:hover { background: var(--roxo); color: #fff }
+.btnAdmin {
+  padding: 6px 14px; border-radius: var(--radius);
+  border: 1px solid var(--cinza-borda); color: var(--texto-sub);
+  background: none; font-size: 12px; font-weight: 500;
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: all .18s;
+}
+.btnAdmin:hover { border-color: var(--roxo); color: var(--roxo) }
+
+/* secao principal */
+.hero {
+  min-height: 100vh;
+  background: #FDF0F7;
+  display: flex; align-items: center; justify-content: center;
+  padding: 100px 40px 60px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.heroBg {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(214,63,160,.07) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(123,45,139,.07) 0%, transparent 50%);
+}
+.heroConteudo { position: relative; max-width: 720px }
+.heroLogoImg {
+  height: 440px; width: auto;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 4px 16px rgba(123,45,139,.15));
+}
+.heroLogoSvg {
+  width: 120px; height: 120px;
+  margin-bottom: 24px;
+}
+.heroLogoFallback {
+  width: 160px; height: 130px;
+  margin-bottom: 24px;
+}
+.heroBadge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--roxo-claro);
+  border: 1px solid #D8B4FE;
+  color: var(--roxo); font-size: 12px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 99px; margin-bottom: 20px;
+}
+.heroTitulo {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(52px, 8vw, 88px);
+  color: var(--rosa); line-height: 1.05; margin-bottom: 4px;
+}
+.heroSub {
+  font-size: 15px; font-weight: 800; letter-spacing: 5px;
+  color: var(--roxo); text-transform: uppercase; margin-bottom: 18px;
+}
+.heroDesc {
+  font-size: 17px; color: var(--texto-sub);
+  line-height: 1.8; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto;
+}
+.heroBotoes { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap }
+.btnHeroPrimario {
+  padding: 14px 34px; border-radius: var(--radius);
+  background: var(--roxo); color: #fff;
+  border: none; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: background .18s, transform .18s, box-shadow .18s;
+  box-shadow: 0 4px 18px rgba(123,45,139,.3);
+}
+.btnHeroPrimario:hover { background: var(--roxo-escuro); transform: translateY(-2px); box-shadow: 0 8px 26px rgba(123,45,139,.4) }
+.btnHeroSecundario {
+  padding: 14px 34px; border-radius: var(--radius);
+  background: transparent; color: var(--rosa);
+  border: 2px solid var(--rosa); font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: all .18s;
+}
+.btnHeroSecundario:hover { background: var(--rosa); color: #fff }
+.heroScroll {
+  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+  color: var(--texto-sub); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+
+.statsBar {
+  background: var(--roxo);
+  display: flex; justify-content: center; flex-wrap: wrap;
+}
+.statItem {
+  flex: 1; min-width: 140px; max-width: 220px;
+  padding: 28px 20px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.statItem:last-child { border-right: none }
+.statNum { font-size: 32px; font-weight: 700; color: #fff }
+.statLbl { font-size: 13px; color: rgba(255,255,255,.75); margin-top: 4px }
+
+.secao {
+  padding: 80px 40px;
+  max-width: 1100px; margin: 0 auto;
+}
+.secaoTitulo { text-align: center; margin-bottom: 48px }
+.secaoTag {
+  display: inline-block;
+  font-size: 11px; font-weight: 800; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--rosa);
+  background: var(--rosa-claro); padding: 4px 14px;
+  border-radius: 99px; margin-bottom: 10px;
+}
+.secaoTitulo h2 {
+  font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--roxo);
+}
+.secaoTitulo p { font-size: 15px; color: var(--texto-sub); margin-top: 10px }
+
+/* sobre a vanessa */
+.quemSouWrap { background: var(--cinza-bg) }
+.quemSouGrid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 56px; align-items: start;
+}
+.quemSouImgWrap { position: relative; flex-shrink: 0 }
+.quemSouImg {
+  width: 100%; border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(123,45,139,.18); display: block;
+}
+.quemSouImgBadge {
+  position: absolute; bottom: -18px; right: -18px;
+  background: var(--rosa); color: #fff;
+  border-radius: 14px; padding: 12px 18px;
+  box-shadow: 0 4px 16px rgba(214,63,160,.35);
+  text-align: center; min-width: 130px;
+}
+.quemSouImgBadge p { font-size: 12px; font-weight: 700; letter-spacing: .5px }
+.quemSouTexto { display: flex; flex-direction: column; gap: 16px; padding-top: 8px }
+.quoteIco { color: var(--roxo-claro); margin-bottom: -8px }
+.quemSouTexto p { font-size: 15px; color: var(--texto); line-height: 1.8 }
+.quemSouTexto strong { color: var(--roxo) }
+.quemSouTags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px }
+.quemSouTags span {
+  background: var(--rosa-claro); color: var(--rosa);
+  font-size: 12px; font-weight: 600;
+  padding: 6px 14px; border-radius: 99px;
+}
+
+/* servicos */
+.servicosWrap { background: #FDF0F7 }
+.servicosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 320px));
+  gap: 20px;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  .servicosGrid { grid-template-columns: repeat(2, minmax(0, 320px)) }
+}
+@media (max-width: 520px) {
+  .servicosGrid { grid-template-columns: 1fr }
+}
+.servicoCard {
+  background: #fff; border-radius: var(--radius);
+  padding: 28px 22px;
+  border: 2px solid var(--cinza-borda);
+  border-top: 4px solid var(--rosa);
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+}
+.servicoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(214,63,160,.15);
+  border-color: var(--rosa);
+}
+.servicoIco { font-size: 38px; margin-bottom: 14px; text-align: center }
+.servicoCard h3 { font-size: 16px; font-weight: 700; color: var(--roxo); margin-bottom: 8px }
+.servicoCard p { font-size: 13px; color: var(--texto-sub); line-height: 1.6 }
+
+.porqueWrap { background: var(--rosa-claro) }
+.porqueGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+.porqueItem {
+  background: #fff; border-radius: var(--radius);
+  padding: 24px 20px; box-shadow: var(--sombra);
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  border-bottom: 3px solid var(--rosa);
+}
+.porqueIco {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--roxo) 0%, var(--rosa) 100%);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.porqueItem h4 { font-size: 15px; font-weight: 700; color: var(--roxo) }
+.porqueItem p  { font-size: 13px; color: var(--texto-sub); line-height: 1.5 }
+
+.ctaWrap {
+  background: #FDF0F7;
+  border-top: 1px solid var(--cinza-borda);
+  padding: 80px 40px; text-align: center;
+}
+.ctaInner {
+  max-width: 600px; margin: 0 auto;
+  background: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--roxo) 60%, #C84BBF 100%);
+  border-radius: 24px; padding: 56px 40px;
+  box-shadow: 0 12px 40px rgba(123,45,139,.3);
+}
+.ctaInner h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(32px, 5vw, 52px); color: #fff; margin-bottom: 12px;
+}
+.ctaInner p { font-size: 16px; color: rgba(255,255,255,.85); margin-bottom: 32px }
+.btnCtaBranco {
+  padding: 14px 36px; border-radius: var(--radius);
+  background: #fff; color: var(--roxo);
+  border: none; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+  transition: transform .18s, box-shadow .18s;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+}
+.btnCtaBranco:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2) }
+
+.footer {
+  background: var(--roxo-escuro);
+  color: rgba(255,255,255,.6);
+  text-align: center; padding: 28px 40px; font-size: 13px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.footer span { color: var(--rosa) }
+.footerLogo { height: 32px; width: auto; opacity: .85 }
+
+/* botao flutuante do whatsapp */
+.whatsappBtn {
+  position: fixed; bottom: 28px; right: 28px; z-index: 999;
+  display: flex; align-items: center; gap: 10px;
+  background: #25D366; color: #fff;
+  border: none; border-radius: 50px;
+  padding: 14px 20px; font-size: 14px; font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  text-decoration: none;
+  transition: transform .18s, box-shadow .18s;
+}
+.whatsappBtn:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(37,211,102,.55) }
+.whatsappIco { flex-shrink: 0 }
+
+/* celular */
+@media (max-width: 900px) {
+  .quemSouGrid { grid-template-columns: 1fr; gap: 32px }
+  .quemSouImgWrap { max-width: 360px; margin: 0 auto }
+}
+@media (max-width: 640px) {
+  .navbar { padding: 0 16px }
+  .hero { padding: 90px 20px 60px }
+  .secao { padding: 56px 20px }
+  .ctaWrap { padding: 40px 16px }
+  .ctaInner { padding: 40px 24px }
+  .statsBar { flex-direction: column }
+  .statItem { border-right: none; border-bottom: 1px solid rgba(255,255,255,.15) }
+  .statItem:last-child { border-bottom: none }
+  .quemSouImgBadge { right: 0; bottom: -14px }
+}

@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--branco); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--sombra);
+  display: flex; gap: 14px; align-items: flex-start;
+  border-left: 4px solid var(--roxo);
+  transition: box-shadow .15s;
+}
+.card:hover { box-shadow: 0 4px 20px rgba(123,45,139,.18) }
+.emoji { font-size: 36px; flex-shrink: 0 }
+.info { flex: 1 }
+.info h3 { font-size: 15px; font-weight: 600; color: var(--texto) }
+.tipo { font-size: 12px; color: var(--roxo); font-weight: 500; margin-top: 2px }
+.det  { font-size: 12px; color: var(--texto-sub); margin-top: 2px }
+.obs  { font-size: 11px; color: var(--texto-sub); margin-top: 4px; font-style: italic }

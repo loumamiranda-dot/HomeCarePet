@@ -1,0 +1,28 @@
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 500; padding: 20px;
+}
+.modal {
+  background: var(--branco); border-radius: var(--radius);
+  width: 100%; max-width: 480px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  animation: modalIn .2s ease;
+  max-height: 90vh; overflow-y: auto;
+}
+@keyframes modalIn { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:none } }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--cinza-borda);
+}
+.titulo { font-size: 16px; font-weight: 700; color: var(--roxo) }
+.fecharBtn {
+  background: none; border: none; cursor: pointer;
+  color: var(--texto-sub); display: flex; align-items: center;
+  border-radius: 6px; padding: 4px;
+}
+.fecharBtn:hover { background: var(--cinza-bg); color: var(--texto) }
+.body { padding: 20px }

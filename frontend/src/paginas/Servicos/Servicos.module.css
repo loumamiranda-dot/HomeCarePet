@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--branco); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--sombra);
+  border-top: 3px solid var(--rosa);
+  transition: box-shadow .15s;
+}
+.card:hover { box-shadow: 0 4px 20px rgba(123,45,139,.15) }
+.inativo { opacity: .6; border-top-color: #ccc }
+.topo { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px }
+.topo h3 { font-size: 15px; font-weight: 600 }
+.desc { font-size: 12px; color: var(--texto-sub); margin-bottom: 12px; min-height: 32px }
+.rodape { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px }
+.preco { font-size: 18px; font-weight: 700; color: var(--roxo) }
+.dur   { font-size: 12px; color: var(--texto-sub) }
